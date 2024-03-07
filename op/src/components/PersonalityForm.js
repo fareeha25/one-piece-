@@ -17,10 +17,34 @@ export const PersonalityForm = ({ onSubmit }) => {
 
   const questionOptions = [
     ["Monkey D. Luffy", "Roronoa Zoro", "Nami", "Usopp", "Sanji"],
-    ["Share it with friends and allies", "Use it to achieve your dreams", "Protect it from those who seek to misuse its power", "Trade it for something valuable", "Leave it untouched as a symbol"],
-    ["Rubber (Gomu Gomu no Mi)", "Fire (Mera Mera no Mi)", "Ice (Hie Hie no Mi)", "Sand (Suna Suna no Mi)", "Human (Hito Hito no Mi)"],
-    ["Skypiea", "Wano Country", "Whole Cake Island", "Fish-Man Island", "Dressrosa"],
-    ["Brave and Adventurous", "Sharp-witted and Cunning", "Kind-hearted and Compassionate", "Mysterious and Elusive", "Bold and Fearless"],
+    [
+      "Share it with friends and allies",
+      "Use it to achieve your dreams",
+      "Protect it from those who seek to misuse its power",
+      "Trade it for something valuable",
+      "Leave it untouched as a symbol",
+    ],
+    [
+      "Rubber (Gomu Gomu no Mi)",
+      "Fire (Mera Mera no Mi)",
+      "Ice (Hie Hie no Mi)",
+      "Sand (Suna Suna no Mi)",
+      "Human (Hito Hito no Mi)",
+    ],
+    [
+      "Skypiea",
+      "Wano Country",
+      "Whole Cake Island",
+      "Fish-Man Island",
+      "Dressrosa",
+    ],
+    [
+      "Brave and Adventurous",
+      "Sharp-witted and Cunning",
+      "Kind-hearted and Compassionate",
+      "Mysterious and Elusive",
+      "Bold and Fearless",
+    ],
   ];
 
   const handleOptionChange = (option) => {
@@ -46,11 +70,12 @@ export const PersonalityForm = ({ onSubmit }) => {
     <div className="personality-form">
       {questionIndex < questions.length ? (
         <>
-          <h3 className="question">{questions[questionIndex]}</h3>
           <div className="options">
+            <h3 className="question">{questions[questionIndex]}</h3>
             {questionOptions[questionIndex].map((option, index) => (
               <div key={index} className="option">
-                <input className="option"
+                <input
+                  className="inputs"
                   type="radio"
                   id={`option-${index}`}
                   name="option"
